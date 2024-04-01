@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="544.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifsp.covid.controller.BulletinManagementController">
+   <children>
+      <TableView fx:id="tableView" layoutX="20.0" layoutY="133.0" prefHeight="199.0" prefWidth="840.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="133.0">
+        <columns>
+          <TableColumn fx:id="cId" prefWidth="41.0" text="Id" />
+          <TableColumn fx:id="cCity" prefWidth="247.0" text="Cidade" />
+            <TableColumn fx:id="cState" minWidth="5.0" prefWidth="106.0" text="Estado" />
+            <TableColumn fx:id="cInfected" prefWidth="85.0" text="Infectados" />
+            <TableColumn fx:id="cDeaths" prefWidth="79.0" text="Mortos" />
+            <TableColumn fx:id="cIcuRatio" prefWidth="113.0" text="\% Ocupação UTI" />
+            <TableColumn fx:id="cDate" prefWidth="119.0" text="Data" />
+        </columns>
+      </TableView>
+      <Button layoutX="617.0" layoutY="498.0" mnemonicParsing="false" onAction="#editBulletin" prefHeight="25.0" prefWidth="90.0" text="Editar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="126.0" />
+      <Button layoutX="20.0" layoutY="498.0" mnemonicParsing="false" onAction="#removeBulletin" prefHeight="25.0" prefWidth="90.0" text="Remover" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      <Button layoutX="723.0" layoutY="498.0" mnemonicParsing="false" onAction="#newBulletin" prefHeight="25.0" prefWidth="90.0" text="Novo" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="377.0" layoutY="454.0" prefHeight="17.0" prefWidth="104.0" text="Ocupação Média: " AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="337.0" layoutY="455.0" prefHeight="17.0" prefWidth="118.0" text="Total de Infectados:" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="337.0" />
+      <ComboBox fx:id="cbState" layoutX="688.0" layoutY="25.0" prefHeight="25.0" prefWidth="144.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="25.0" />
+      <DatePicker fx:id="dpBegin" layoutX="95.0" layoutY="73.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="73.0" />
+      <DatePicker fx:id="dpEnd" layoutX="348.0" layoutY="73.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="348.0" AnchorPane.topAnchor="73.0" />
+      <Label layoutX="20.0" layoutY="77.0" prefHeight="17.0" prefWidth="75.0" text="Data Inicial:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="77.0" />
+      <Label layoutX="278.0" layoutY="77.0" prefHeight="17.0" prefWidth="69.0" text="Data Final: " AnchorPane.leftAnchor="278.0" AnchorPane.topAnchor="77.0" />
+      <Label layoutX="22.0" layoutY="29.0" prefHeight="17.0" prefWidth="52.0" text="Cidade:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="29.0" />
+      <TextField fx:id="txtCity" layoutX="78.0" layoutY="25.0" prefHeight="25.0" prefWidth="518.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="25.0" />
+      <Label layoutX="610.0" layoutY="29.0" prefHeight="17.0" prefWidth="52.0" text="Estado:" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="29.0" />
+      <Button layoutX="688.0" layoutY="73.0" mnemonicParsing="false" onAction="#filter" prefHeight="25.0" prefWidth="144.0" text="Filtrar" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="73.0" />
+      <Label layoutX="202.0" layoutY="455.0" prefHeight="17.0" prefWidth="98.0" text="Total de Mortos: " AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="202.0" />
+      <Label fx:id="lbAverageIcu" layoutX="126.0" layoutY="455.0" prefHeight="17.0" prefWidth="45.0" text="--" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="126.0" />
+      <Label fx:id="lbTotalDeaths" layoutX="300.0" layoutY="455.0" prefHeight="17.0" prefWidth="45.0" text="--" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="300.0" />
+      <Label fx:id="lbTotalInfected" layoutX="455.0" layoutY="455.0" prefHeight="17.0" prefWidth="65.0" text="--" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="455.0" />
+   </children>
+</AnchorPane>

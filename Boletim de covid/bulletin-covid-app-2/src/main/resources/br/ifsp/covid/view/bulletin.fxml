@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="284.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifsp.covid.controller.BulletinController">
+   <children>
+      <Label layoutX="51.0" layoutY="52.0" text="Cidade:" />
+      <Label layoutX="51.0" layoutY="104.0" text="Infectados:" />
+      <Label layoutX="51.0" layoutY="152.0" text="\% de Leitos:" />
+      <Label layoutX="300.0" layoutY="52.0" text="Estado:" />
+      <Label layoutX="300.0" layoutY="104.0" text="Mortos:" />
+      <Label layoutX="300.0" layoutY="152.0" text="Data:" />
+      <Button fx:id="btnCancel" layoutX="115.0" layoutY="220.0" mnemonicParsing="false" onAction="#cancelInfo" text="Cancelar" />
+      <Button fx:id="btnSave" layoutX="380.0" layoutY="220.0" mnemonicParsing="false" onAction="#saveInfo" text="Salvar" />
+      <TextField fx:id="txtCity" layoutX="115.0" layoutY="48.0" />
+      <ComboBox fx:id="selectState" layoutX="353.0" layoutY="48.0" prefWidth="150.0" />
+      <TextField fx:id="txtInfected" layoutX="115.0" layoutY="100.0" />
+      <TextField fx:id="txtDeath" layoutX="354.0" layoutY="100.0" />
+      <TextField fx:id="txtIcuRatio" layoutX="115.0" layoutY="148.0" />
+      <DatePicker fx:id="selectDate" layoutX="347.0" layoutY="148.0" />
+   </children>
+</AnchorPane>
